@@ -27,13 +27,9 @@ body {
   font-weight: 600;
 }
 
-.body-container {
-  width: 1440px;
-  margin: auto;
-}
-
-.content-container {
-  margin: 4rem 15rem 1.5rem;
+.container {
+  width: min(90%, 60rem);
+  margin: 4rem auto 1.5rem;
 }
 
 img,
