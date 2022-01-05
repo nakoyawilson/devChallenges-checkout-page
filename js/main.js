@@ -117,7 +117,6 @@ submitButton.addEventListener("click", (e) => {
     alert("Success! Your order has been placed.");
     inputs.forEach((input) => {
       input.value = "";
-      // input.previousElementSibling.style.display = "block";
     });
     country.value = "";
     country.style.color = "#828282";
