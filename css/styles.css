@@ -478,7 +478,6 @@ select {
   }
 
   .item-details {
-    /* flex-direction: row; */
     margin-top: 0.5rem;
     align-items: center;
   }
