@@ -358,7 +358,7 @@ select {
   }
 
   header {
-    margin-inline: auto;
+    margin: 0 auto 1.3125rem;
   }
 
   .form {
@@ -381,15 +381,9 @@ select {
   .country-postal-code {
     gap: 1.455rem;
   }
-}
 
-@media screen and (max-width: 576px) {
   .title {
     font-size: 1.5rem;
-  }
-
-  header {
-    margin-bottom: 1.3125rem;
   }
 
   .image {
