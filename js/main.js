@@ -128,7 +128,7 @@ submitButton.addEventListener("click", (e) => {
 
 inputs.forEach((input) => {
   input.addEventListener("keyup", (event) => {
-    if (event.keyCode === 13) {
+    if (event.code === "Enter") {
       submitButton.click();
     }
   });
