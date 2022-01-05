@@ -62,7 +62,7 @@ main {
 }
 
 .contact {
-  margin-bottom: 3.625rem;
+  margin-bottom: 2.375rem;
 }
 
 .form-heading {
@@ -92,6 +92,25 @@ main {
   margin-bottom: 0.4375rem;
 }
 
+.error-container {
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+}
+
+.error-icon {
+  fill: var(--orange);
+  transform: scale(0.75);
+}
+
+.error-message {
+  color: var(--orange);
+  font-size: 0.75rem;
+  color: var(--orange);
+}
+
 .form-input {
   outline: none;
   border: 1px solid var(--gray3);
@@ -102,7 +121,7 @@ main {
   padding: 1.125rem 1.125rem 1.125rem 3.25rem;
   font-size: 1rem;
   width: 100%;
-  margin-bottom: 1.25rem;
+  /* margin-bottom: 1.25rem; */
 }
 
 #phone {
@@ -214,7 +233,7 @@ select {
 
 .image {
   border-radius: 13px;
-  width: min(100%, 8.4rem);
+  width: 8.4rem;
   height: auto;
   margin-right: 1.25rem;
 }
@@ -395,7 +414,7 @@ select {
   }
 
   .image {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 

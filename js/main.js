@@ -11,7 +11,11 @@ const increaseShoe = document.querySelector("#increase-shoe");
 const quantityBag = document.querySelector("#quantity-bag");
 const quantityShoe = document.querySelector("#quantity-shoe");
 const submitButton = document.querySelector(".submit-btn");
-const inputs = document.querySelector("input");
+const inputs = document.querySelectorAll("input");
+const errorMessages = document.querySelectorAll(".error-container");
+const countryErrorMessage = document.querySelector("#country-error");
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const numberRegex = /\d+/;
 
 const calculateTotal = () => {
   const bagQty = Number(quantityBag.innerHTML);
@@ -78,8 +82,48 @@ increaseShoe.addEventListener("click", () => {
   calculateTotal();
 });
 
+const validateForm = () => {
+  inputs.forEach((input) => {
+    if (input.type !== "checkbox") {
+      const errorContainer = input.nextElementSibling;
+      const errorMessage = input.nextElementSibling.lastElementChild.firstChild;
+      if (input.value === "" && input.type !== "checkbox") {
+        errorContainer.style.opacity = "1";
+      } else if (input.type === "email" && !input.value.match(emailRegex)) {
+        errorMessage.innerHTML = "Looks like this is not an email";
+      } else if (input.type === "tel" && !input.value.match(numberRegex)) {
+        errorMessage.innerHTML = "Looks like this is not a phone number";
+      } else {
+        input.nextElementSibling.style.opacity = "0";
+      }
+    }
+  });
+  if (country.value === "") {
+    countryErrorMessage.style.opacity = "1";
+  } else {
+    countryErrorMessage.style.opacity = "0";
+  }
+};
+
 submitButton.addEventListener("click", (e) => {
-  alert("Success! Your order has been placed.");
+  validateForm();
+  let errorDisplayed = false;
+  errorMessages.forEach((errorMessage) => {
+    if (errorMessage.style.opacity === "1") {
+      errorDisplayed = true;
+    }
+  });
+  if (errorDisplayed === false) {
+    alert("Success! Your order has been placed.");
+    inputs.forEach((input) => {
+      input.value = "";
+      // input.previousElementSibling.style.display = "block";
+    });
+    country.value = "";
+    country.style.color = "#828282";
+    document.querySelector("#save").checked = false;
+  }
+  e.preventDefault();
 });
 
 inputs.forEach((input) => {
