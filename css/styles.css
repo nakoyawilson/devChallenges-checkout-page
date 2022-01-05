@@ -374,7 +374,10 @@ select {
     transform: scale(0.5);
   }
 
-  .error-message {
+  .error-message,
+  .regular-price,
+  .checkbox-label,
+  .form-label {
     font-size: 0.625rem;
   }
 
@@ -391,31 +394,17 @@ select {
     height: 7.8rem;
   }
 
-  .item-name {
+  .item-name,
+  .form-input,
+  .form-input::placeholder {
     font-size: 0.75rem;
-  }
-
-  .sale-price {
-    font-size: 0.875rem;
-  }
-
-  .regular-price {
-    font-size: 0.625rem;
   }
 
   .shipping-heading,
   .total-heading,
-  .form-heading {
+  .form-heading,
+  .sale-price {
     font-size: 0.875rem;
-  }
-
-  .form-label {
-    font-size: 0.625rem;
-  }
-
-  .form-input,
-  .form-input::placeholder {
-    font-size: 0.75rem;
   }
 
   .checkbox {
@@ -441,6 +430,16 @@ select {
     height: 0.9375rem;
     top: 0.865625rem;
     right: 0.5625rem;
+  }
+
+  .save-details {
+    position: relative;
+  }
+
+  .save-details div:last-child {
+    position: absolute;
+    top: -0.25rem;
+    left: 1.75rem;
   }
 }
 
