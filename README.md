@@ -45,7 +45,14 @@
 
 ## Features
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [devChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO) was to build an application to complete the following user stories:
+
+- [x] User story: I can see a page following the given design
+- [x] User story: I can input email, phone, full name, address, city, country, and postal code
+- [x] User story: I can input the number of items
+- [x] User story: I can select at least 3 countries from the dropdown
+- [x] User story: When I click submit button or press enter, I can see a warning if validation fails
+- [x] User story: When I click submit button or press enter, I can see a successful alert if validation succeeds
 
 ## Contact
 
