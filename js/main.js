@@ -17,6 +17,8 @@ const countryErrorMessage = document.querySelector("#country-error");
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const numberRegex = /\d+/;
 
+console.log(country.value);
+
 const calculateTotal = () => {
   const bagQty = Number(quantityBag.innerHTML);
   const shoeQty = Number(quantityShoe.innerHTML);
